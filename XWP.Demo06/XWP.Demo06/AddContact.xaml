@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XWP.Demo06.AddContact">
+    <ContentPage.Content >
+        
+        <StackLayout Orientation="Vertical" Padding="15">
+
+            <Label Text="Jméno" FontSize="Small" BindingContext=""/>
+            <Label x:Name="FirstNameContentLabel" FontSize="Default" FontAttributes="Bold" />
+       
+            <Entry x:Name="FirstName" FontSize="Default" />
+                <Label Text="Příjmení" FontSize="Small" Margin="0,10,0,0" />
+            <Label x:Name="LastNameContentLabel2" FontSize="Default" FontAttributes="Bold" />
+            <Entry x:Name="LastName" FontSize="Default" />
+            <Label Text="Email" FontSize="Small" Margin="0,10,0,0" />
+            <Label x:Name="EmailContentLabel" FontSize="Default" FontAttributes="Bold" />
+            <Entry x:Name="Email2" FontSize="Default" />
+            <Label Text="Telefonní číslo" FontSize="Small" Margin="0,10,0,0" />
+            <Label x:Name="PhoneNumberContentLabel" FontSize="Default" FontAttributes="Bold" />
+            <Entry x:Name="Telefon_Cislo" FontSize="Default" />
+            <Button Text="Vytvoř nový kontakt" Clicked="Button_Clicked"></Button>
+
+
+          
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

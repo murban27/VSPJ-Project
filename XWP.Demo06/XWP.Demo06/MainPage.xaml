@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:XWP.Demo06.Converters"
+             mc:Ignorable="d"
+             x:Class="XWP.Demo06.MainPage"
+             Title="Kontakty">
+    <ContentPage.Resources>
+        <converters:ContactToFullNameConverter x:Key="ContactToFullNameConverter" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView x:Name="ContactsListView" SelectionMode="None" ItemTapped="ContactsListView_OnItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Converter={StaticResource ContactToFullNameConverter}}" />
+            </DataTemplate>
+            
+        </ListView.ItemTemplate>
+        
+    </ListView>
+        <Button Text="Nový Kontakt" BackgroundColor="WhiteSmoke" WidthRequest="200" HeightRequest="200" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</ContentPage>
